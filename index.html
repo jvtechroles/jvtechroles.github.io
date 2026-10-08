@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>JV Tech Roles | Engineering & AI Opportunities</title>
+
+  <meta
+    name="description"
+    content="Confidential engineering, AI, full-stack, mobile, and autonomous systems opportunities."
+  />
+
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #18212f;
+      --muted: #667085;
+      --line: #e6eaf0;
+      --accent: #1f5eff;
+      --accent-light: #eef4ff;
+      --tag: #f2f4f7;
+      --remote: #0f766e;
+      --onsite: #7c3aed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background: linear-gradient(
+        180deg,
+        #f9fbff 0%,
+        var(--bg) 100%
+      );
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        #14213d 0%,
+        #1f5eff 100%
+      );
+      color: white;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow:
+        0 18px 50px rgba(31, 94, 255, 0.18);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.14);
+      padding: 8px 10px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.05;
+      margin: 0 0 14px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.86);
+      margin: 0;
+    }
+
+    .note {
+      margin: 18px 0 34px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .cta {
+      margin: 28px 0 34px;
+      padding: 24px 26px;
+      border: 1px solid #d9e2ff;
+      border-radius: 18px;
+      background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f3f7ff 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow:
+        0 8px 24px rgba(31, 94, 255, 0.06);
+    }
+
+    .cta h3 {
+      margin: 0 0 6px;
+      font-size: 19px;
+    }
+
+    .cta p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .cta a.email {
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .cta a.button {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      white-space: nowrap;
+      box-shadow:
+        0 8px 18px rgba(31, 94, 255, 0.18);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow:
+        0 8px 24px rgba(16, 24, 40, 0.05);
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .role {
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .badge {
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    .badge.remote {
+      background: #ecfdf3;
+      color: var(--remote);
+    }
+
+    .badge.onsite {
+      background: #f3e8ff;
+      color: var(--onsite);
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .summary {
+      font-size: 15px;
+      line-height: 1.55;
+      margin: 0 0 16px;
+    }
+
+    .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      color: #475467;
+      margin: 18px 0 9px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--tag);
+      border: 1px solid #e7e9ee;
+      color: #344054;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 9px;
+      border-radius: 999px;
+    }
+
+    .footer {
+      margin-top: 34px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: white;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer strong {
+      color: var(--text);
+    }
+
+    .footer a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 780px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 30px 24px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .top {
+        flex-direction: column;
+      }
+
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="wrap">
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        Confidential Search Portfolio
+      </div>
+
+      <h1>
+        Engineering & AI Opportunities
+      </h1>
+
+      <p>
+        A curated selection of senior software,
+        full-stack, mobile, autonomous systems,
+        and agentic AI roles.
+
+        Company names are intentionally withheld
+        and shared directly with qualified candidates
+        during the recruiting process.
+      </p>
+
+    </section>
+
+
+    <p class="note">
+      The opportunities below are intentionally
+      generalized to protect client confidentiality
+      while still providing a clear view of the
+      technology, scope, location, and type of work.
+    </p>
+
+
+    <section class="cta">
+
+      <div>
+
+        <h3>
+          Interested in one of these opportunities?
+        </h3>
+
+        <p>
+          Send your resume to
+
+          <a
+            class="email"
+            href="mailto:joel@towerh.com"
+          >
+            joel@towerh.com
+          </a>
+
+          and mention the role that caught
+          your attention.
+        </p>
+
+      </div>
+
+      <a
+        class="button"
+        href="mailto:joel@towerh.com?subject=Engineering%20Opportunity&body=Hi%20Joel%2C%0A%0AI%27m%20interested%20in%20one%20of%20the%20engineering%20opportunities.%20The%20role%20I%27m%20interested%20in%20is%3A%20%0A%0AI%27ve%20attached%20my%20resume.%0A%0ABest%2C"
+      >
+        Apply / Send Resume
+      </a>
+
+    </section>
+
+
+    <section class="grid">
+
+
+      <!-- ROLE 1 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Full-Stack / AI Software Engineer
+          </h2>
+
+          <span class="badge remote">
+            Remote
+          </span>
+
+        </div>
+
+        <div class="meta">
+          Cleantech • AI / ML • Product Engineering
+        </div>
+
+        <p class="summary">
+          Build user-facing and backend systems
+          for a growing AI team, with meaningful
+          ownership across product development,
+          full-stack engineering, and AI-enabled
+          workflows.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            Full-Stack
+          </span>
+
+          <span class="tag">
+            AI / ML
+          </span>
+
+          <span class="tag">
+            APIs
+          </span>
+
+          <span class="tag">
+            Cloud
+          </span>
+
+          <span class="tag">
+            Product Engineering
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROLE 2 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Full-Stack Software Engineer
+          </h2>
+
+          <span class="badge remote">
+            Remote
+          </span>
+
+        </div>
+
+        <div class="meta">
+          Fintech / Payments • Product Engineering
+        </div>
+
+        <p class="summary">
+          Build and scale modern web products
+          in a payments-oriented environment,
+          working across frontend, backend,
+          integrations, and deployment
+          infrastructure.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            React
+          </span>
+
+          <span class="tag">
+            JavaScript
+          </span>
+
+          <span class="tag">
+            Python
+          </span>
+
+          <span class="tag">
+            Payments
+          </span>
+
+          <span class="tag">
+            DevOps
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROLE 3 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Senior Full-Stack Engineer
+          </h2>
+
+          <span class="badge remote">
+            Remote
+          </span>
+
+        </div>
+
+        <div class="meta">
+          Trading / Quant • High-Performance Systems
+        </div>
+
+        <p class="summary">
+          Work on performance-sensitive software
+          for real-time financial products, with
+          significant independence and ownership
+          across distributed systems and modern
+          web applications.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            React
+          </span>
+
+          <span class="tag">
+            TypeScript
+          </span>
+
+          <span class="tag">
+            Node
+          </span>
+
+          <span class="tag">
+            Distributed Systems
+          </span>
+
+          <span class="tag">
+            Real-Time Systems
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROLE 4 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Full-Stack Mobile Engineer
+          </h2>
+
+          <span class="badge remote">
+            Remote
+          </span>
+
+        </div>
+
+        <div class="meta">
+          Mobile Product • Rapid Prototyping
+        </div>
+
+        <p class="summary">
+          Build and iterate quickly on mobile
+          products and MVPs, with a strong bias
+          toward shipping, experimentation,
+          and practical product decisions.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            React Native
+          </span>
+
+          <span class="tag">
+            Python
+          </span>
+
+          <span class="tag">
+            MVPs
+          </span>
+
+          <span class="tag">
+            Rapid Prototyping
+          </span>
+
+          <span class="tag">
+            High Ownership
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROLE 5 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Senior Software Engineer,
+            Autonomous Systems
+          </h2>
+
+          <span class="badge onsite">
+            Austin, TX • On-site
+          </span>
+
+        </div>
+
+        <div class="meta">
+          Autonomy • Robotics / Physical Systems
+          • Relocation Assistance
+        </div>
+
+        <p class="summary">
+          Build operational software around
+          real-world autonomous systems,
+          including live monitoring, telemetry,
+          control workflows, fleet interfaces,
+          visualization, and software that
+          interacts directly with physical systems.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            React
+          </span>
+
+          <span class="tag">
+            TypeScript
+          </span>
+
+          <span class="tag">
+            Real-Time Systems
+          </span>
+
+          <span class="tag">
+            Telemetry
+          </span>
+
+          <span class="tag">
+            Control / Operator Tools
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROLE 6 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Full-Stack Engineer,
+            Agentic AI
+          </h2>
+
+          <span class="badge onsite">
+            New York, NY • On-site
+          </span>
+
+        </div>
+
+        <div class="meta">
+          Agentic AI • Platform Engineering
+        </div>
+
+        <p class="summary">
+          Build product and platform capabilities
+          for agentic systems, with hands-on
+          ownership across services, AI workflows,
+          integrations, and modern full-stack
+          infrastructure.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            Go
+          </span>
+
+          <span class="tag">
+            Python
+          </span>
+
+          <span class="tag">
+            TypeScript
+          </span>
+
+          <span class="tag">
+            Agents
+          </span>
+
+          <span class="tag">
+            Platform Engineering
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROLE 7 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Staff Engineer,
+            Agentic AI
+          </h2>
+
+          <span class="badge onsite">
+            San Francisco, CA • On-site
+          </span>
+
+        </div>
+
+        <div class="meta">
+          AI Infrastructure • Agent Architecture
+        </div>
+
+        <p class="summary">
+          Design advanced agent systems and
+          the infrastructure around them,
+          including tool use, evaluation,
+          efficiency, orchestration, and
+          production AI architecture.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            Python
+          </span>
+
+          <span class="tag">
+            PyTorch
+          </span>
+
+          <span class="tag">
+            Agent Architecture
+          </span>
+
+          <span class="tag">
+            Tool Calling
+          </span>
+
+          <span class="tag">
+            Evaluation
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROLE 8 -->
+
+      <article class="card">
+
+        <div class="top">
+
+          <h2 class="role">
+            Full-Stack Engineer,
+            Digital Assets
+          </h2>
+
+          <span class="badge remote">
+            Remote
+          </span>
+
+        </div>
+
+        <div class="meta">
+          Financial Technology • Blockchain /
+          Digital Assets
+        </div>
+
+        <p class="summary">
+          Build modern web applications and
+          backend services in a fast-moving
+          financial technology environment,
+          with opportunities to work around
+          security, observability, compliance,
+          and infrastructure.
+        </p>
+
+        <div class="label">
+          Core skills
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            React
+          </span>
+
+          <span class="tag">
+            Next.js
+          </span>
+
+          <span class="tag">
+            Node
+          </span>
+
+          <span class="tag">
+            JavaScript
+          </span>
+
+          <span class="tag">
+            Security / DevOps
+          </span>
+
+        </div>
+
+      </article>
+
+
+    </section>
+
+
+    <div class="footer">
+
+      <strong>
+        Ready to explore one of these roles?
+      </strong>
+
+      <br />
+
+      Company details, compensation,
+      team structure, and interview process
+      are shared directly with qualified
+      candidates.
+
+      To be considered, email your resume to
+
+      <a href="mailto:joel@towerh.com">
+        joel@towerh.com
+      </a>
+
+      and include the role you are interested in.
+
+    </div>
+
+  </main>
+
+</body>
+</html>
